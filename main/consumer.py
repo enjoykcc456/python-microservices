@@ -14,7 +14,7 @@ def callback(ch, method, properties, body):
     print(data)
 
     if properties.content_type == 'product_created':
-        product = Product(id=data['id'], title=data['title'], image=data['image'])
+        product = Product(id=data['id'], title=data['title'], image=data['image'], likes=data['likes'])
         db.session.add(product)
         db.session.commit()
         print('Product created in main')
@@ -23,6 +23,7 @@ def callback(ch, method, properties, body):
         product = Product.query.get(data['id'])
         product.title = data['title']
         product.image = data['image']
+        product.likes = data['likes']
         db.session.commit()
         print('Product updated in main')
 

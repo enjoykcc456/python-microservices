@@ -16,6 +16,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    restart: always
     command: 'python consumer.py'
     depends_on:
       - db

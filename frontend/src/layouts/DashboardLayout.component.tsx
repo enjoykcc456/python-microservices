@@ -1,8 +1,8 @@
 import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
-import { DashboardLayoutStyle } from "./dashboardLayout.style";
-import { TopBar } from "./components/topBar/topBar.component";
+import { DashboardLayoutStyle } from "./DashboardLayout.style";
+import { TopBar } from "./components/TopBar/TopBar.component";
 
 interface Props {
   children?: React.ReactNode;

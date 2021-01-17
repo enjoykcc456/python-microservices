@@ -14,4 +14,7 @@ export const TopBarStyle = (theme: Theme) =>
     icon: {
       marginRight: "10px",
     },
+    title: {
+      textDecoration: "none",
+    },
   });

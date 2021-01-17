@@ -25,8 +25,8 @@ SECRET_KEY = 'vpj9+ksgaq_+3mmwfp_3b-(ar#%w+6)pobvsue6=g9#o!^rtp3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['host.docker.internal', 'localhost']
-
+# ALLOWED_HOSTS = ['host.docker.internal', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -45,12 +45,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'admin.urls'
@@ -127,4 +127,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORIGIN_ALLOW_ALL = True
