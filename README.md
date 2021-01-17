@@ -6,8 +6,8 @@ This app implements basic microservice in python that allows user to create prod
 the products created. 
 
 Both Django and Flask are spawn with docker-compose as different isolated microservices with own database. 
-Django microservice exposes the API to allow user to list, create, retrieve, update and destroy product.
-While Flask microservice exposes the API to allow user to like the product. Both microservices will be communicating 
+Django microservice exposes the API to allow admin user to list, create, retrieve, update and destroy product on admin page.
+While Flask microservice exposes the API to allow user to like the product on main page. Both microservices will be communicating 
 and maintaining data consistency via RabbitMQ.
 
 ### Build With
